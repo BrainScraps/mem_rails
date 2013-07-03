@@ -1,0 +1,16 @@
+<div id="game">
+  <div id="board">
+    <% @double.each do |image| %>
+
+      <div class="tile">
+      <%= image_tag asset_path(image.src), alt: image.name %>
+      </div>
+    <% end %>
+  </div>
+  <div id="results">
+    <span class="image random"></span>
+    <h1>Good job!</h1>
+    <p>You found all the matches in <span id="score"></span> clicks.</p>
+    <button>play again</button>
+  </div>
+</div>
